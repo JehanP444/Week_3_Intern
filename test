@@ -1,0 +1,5 @@
+feature choosing song in spotify
+given user want to pick a song in spotify
+when user type title / singer in search box
+then song will pop up in search box
+then user will choose a song in search

@@ -1,0 +1,115 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-15T15:25:42.006Z",
+    "end": "2023-03-15T15:25:55.579Z",
+    "duration": 13573,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "73ab0831-c30f-43ce-800e-aa4a30759189",
+      "title": "",
+      "fullFile": "cypress\\e2e\\demoblaze\\login-test.cy.js",
+      "file": "cypress\\e2e\\demoblaze\\login-test.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bc1314ec-9fd5-4ccb-9473-210abb562360",
+          "title": "Demoblaze app login scenario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully login using correct credentials",
+              "fullTitle": "Demoblaze app login scenario Successfully login using correct credentials",
+              "timedOut": null,
+              "duration": 11631,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\login-test.cy.js\\\\Demoblaze app login scenario -- Successfully login using correct credentials.png\"\n      },\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\login-test.cy.js\\\\Demoblaze app login scenario -- Successfully login using correct credentials (1).png\"\n      },\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\login-test.cy.js\\\\Demoblaze app login scenario -- Successfully login using correct credentials (2).png\"\n      },\n      {\n        \"title\": \"Screenshot\",\n        \"value\": \"\\\\login-test.cy.js\\\\Demoblaze app login scenario -- Successfully login using correct credentials (3).png\"\n      },\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\login-test.cy.js\\\\Demoblaze app login scenario -- Successfully login using correct credentials (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "cy.visit(\"https://www.demoblaze.com/index.html\");\ncy.screenshot();\ncy.get(\"[data-target='#logInModal']\").click();\ncy.get(\"[onclick='logIn()']\").should(\"be.visible\");\ncy.wait(1e3);\ncy.screenshot();\ncy.get(\"#loginusername\").type(\"wibowo.bullseye\").should(\"have.value\", \"wibowo.bullseye\");\ncy.get(\"#loginpassword\").type(\"bullseye\").should(\"have.value\", \"bullseye\");\ncy.screenshot();\ncy.get(\"[onclick='logIn()']\").click();\ncy.screenshot();\ncy.get(\"#nameofuser\").should(\"contain\", \"wibowo.bullseye\");\ncy.screenshot();\ncy.get(\"#tbodyid > div:nth-of-type(4) .hrefch\").click();\ncy.screenshot();\ncy.get(\".btn-success\").click();\ncy.wait(2e3);\ncy.screenshot();\ncy.on(\"window:confirm\", (txt) => {\n  expect(txt).to.equal(\"Product added.\");\n  cy.screenshot();\n});\ncy.get(\"#cartur\").click();\ncy.wait(2e3);\ncy.screenshot();\ncy.get(\"[onclick='logOut()']\").click();\ncy.screenshot();\ncy.get(\"#nameofuser\").should(\"contain\", \"\");\ncy.wait(2e3);\ncy.screenshot();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<a#nameofuser.nav-link>' to contain 'wibowo.bullseye'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<a#nameofuser.nav-link>' to contain 'wibowo.bullseye'\n    at Context.eval (https://www.demoblaze.com/__cypress/tests?p=cypress\\e2e\\demoblaze\\login-test.cy.js:16:29)",
+                "diff": null
+              },
+              "uuid": "0f243d92-c078-4a75-aae5-9d784afda7ed",
+              "parentUUID": "bc1314ec-9fd5-4ccb-9473-210abb562360",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0f243d92-c078-4a75-aae5-9d784afda7ed"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 11631,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "embeddedVideos": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
