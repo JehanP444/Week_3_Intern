@@ -21,7 +21,7 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalstepdefinitions": true,
-    "stepDefinitions": "cypress/e2e/store-demoblaze/*.js",
+    "stepDefinitions": "cypress/e2e/webKuncie/*.js",
     "html": {
       "enabled": true
     }
