@@ -2,9 +2,9 @@
   "name": "cypress",
   "version": "1.0.0",
   "description": "",
-  "main": "test.js",
+  "main": "tesJehan.js",
   "scripts": {
-    "test": "cypress run --headed --browser chrome --spec cypress/e2e/demoblaze/login-test.cy.js",
+    "test": "cypress run --headed --browser chrome --spec cypress/e2e/webKuncieJehan/tesJehan.js",
     "open": "cypress open",
     "test:cucumber": "cypress run --headed --browser chrome"
   },
