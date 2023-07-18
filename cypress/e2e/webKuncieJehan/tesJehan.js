@@ -16,6 +16,6 @@ When(/^Jehan melihat kelas yang tersedia$/, () => {
   cy.get("[data-id='a6ac833']").click()
   cy.get("[data-type='free']").click()
   cy.wait(5000)
-  cy.get("[class='course-button medium-btn']").eq(1).click()
+  cy.get("[href='https://www.kuncie.com/premium/kelas/tingkatkan-profit-dengan-mengelola-keuangan-bisnismu/']").click()
   cy.wait(2000)
 });
