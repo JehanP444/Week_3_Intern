@@ -17,5 +17,5 @@ When(/^Jehan melihat kelas yang tersedia$/, () => {
   cy.get("[data-type='free']").click()
   cy.wait(5000)
   cy.get("[href='https://www.kuncie.com/premium/kelas/tingkatkan-profit-dengan-mengelola-keuangan-bisnismu/']").click()
-  cy.wait(2000)
+  cy.wait(4000)
 });
