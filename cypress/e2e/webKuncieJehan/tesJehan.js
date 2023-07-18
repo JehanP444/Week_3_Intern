@@ -1,5 +1,4 @@
 import {Given,When,Then} from "@badeball/cypress-cucumber-preprocessor";
-import { when } from "cypress/types/jquery";
 
 Given(/^Jehan login$/,() => {
   cy.visit('https://www.kuncie.com/premium/')
@@ -15,7 +14,8 @@ Given(/^Jehan login$/,() => {
 
 When(/^Jehan melihat kelas yang tersedia$/, () => {
   cy.get("[data-id='a6ac833']").click()
+  cy.get("[data-type='free']").click()
+  cy.wait(5000)
   cy.get("[class='course-button medium-btn']").eq(1).click()
-  cy.wait(2000)
   cy.wait(2000)
 });
