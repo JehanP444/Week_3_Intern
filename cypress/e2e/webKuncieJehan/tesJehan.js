@@ -15,9 +15,7 @@ Given(/^Jehan login$/,() => {
 
 When(/^Jehan melihat kelas yang tersedia$/, () => {
   cy.get("[data-id='a6ac833']").click()
-  cy.wait(3000)
-});
-
-When(/^Jehan memilih kelas$/, () => { 
   cy.get("[class='course-button medium-btn']").eq(1).click()
+  cy.wait(2000)
+  cy.wait(2000)
 });
