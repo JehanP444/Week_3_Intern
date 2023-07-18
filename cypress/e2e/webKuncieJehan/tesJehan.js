@@ -16,6 +16,9 @@ When(/^Jehan melihat kelas yang tersedia$/, () => {
   cy.get("[data-id='a6ac833']").click()
   cy.get("[data-type='free']").click()
   cy.wait(5000)
-  cy.get("[href='https://www.kuncie.com/premium/kelas/tingkatkan-profit-dengan-mengelola-keuangan-bisnismu/']").click()
-  cy.wait(4000)
+});
+
+Then(/^Jehan memilih kelas$/, () => {  
+  cy.get("[href='https://www.kuncie.com/premium/kelas/cara-mendapatkan-modal-usaha/']").eq(2).click()
+  cy.get("[id='btn-join']").eq(2).click({force : true})
 });
